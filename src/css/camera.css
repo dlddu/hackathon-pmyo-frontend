@@ -1,0 +1,19 @@
+.image-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px dashed #aaa;
+  margin: 10px;
+  background-color: #f0f0f0;
+}
+
+.image-upload-container input {
+  margin: 10px 0;
+}
+
+.image-preview {
+  max-width: 100%;
+  margin-top: 20px;
+}
