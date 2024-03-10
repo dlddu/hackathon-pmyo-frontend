@@ -27,8 +27,8 @@ const Camera = () => {
     navigate("/chatgpt", {
       state: {
         image: previewUrl,
-        text: JSON.parse(apiResult.data.conversation).choices[0].message
-          .content,
+        text: JSON.parse(apiResult.data.conversation.replaceAll("\n", "\\n"))
+          .choices[0].message.content,
       },
     });
   };
