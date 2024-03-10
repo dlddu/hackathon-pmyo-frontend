@@ -12,7 +12,9 @@ const Chatgpt = () => {
         alt="Uploaded"
         className="uploaded-image"
       />
-      <div className="analysis-text">{location.state.text}</div>
+      <div className="analysis-text" style={{ whiteSpaceCollapse: "preserve" }}>
+        {location.state.text}
+      </div>
     </div>
   );
 };
