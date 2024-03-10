@@ -2,9 +2,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  height: 600px;
 }
 
 .profile-content {
   text-align: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  margin-top: 180px;
+  background-color: transparent; /* 배경색을 투명하게 설정 */
+  border: none; /* 테두리를 없앱니다 */
+}
+
+.navigation button {
+  background-color: transparent; /* 버튼의 배경색을 투명하게 설정 */
+  border: none; /* 버튼의 테두리를 없앱니다 */
+  padding: 0; /* 내부 패딩을 없앱니다 */
+}
+
+.navigation button img {
+  width: 50px; /* 이미지의 크기를 조정합니다 */
+  height: 50px;
 }
