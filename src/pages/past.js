@@ -2,9 +2,15 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BaseUrl } from "./url";
 import "../css/home.css";
+import image1 from "../img/past_icon.png";
+import image2 from "../img/chart_icon.png";
+import image3 from "../img/camera_icon.png";
+import image4 from "../img/profile_icon.png";
+import { useNavigate } from "react-router-dom";
 
 export const Past = () => {
   const [resultState, setResult] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get(`${BaseUrl}/server/imgList`).then((it) => {
@@ -70,6 +76,60 @@ export const Past = () => {
               <img src={it.url} alt={"없다"} width={90} height={90} />
             </div>
           ))}
+        </div>
+        <div
+          className="navigation"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr 1fr 1fr",
+            width: "105%",
+            marginTop: "10px",
+          }}
+        >
+          <button
+            onClick={() => navigate("/past")}
+            style={{
+              height: "70px",
+              width: "70px",
+              background: "transparent",
+              borderWidth: 0,
+            }}
+          >
+            <img src={image1} alt="과거" />
+          </button>
+          <button
+            onClick={() => navigate("/chart")}
+            style={{
+              height: "70px",
+              width: "70px",
+              background: "transparent",
+              borderWidth: 0,
+            }}
+          >
+            <img src={image2} alt="차트" />
+          </button>
+          <button
+            onClick={() => navigate("/camera")}
+            style={{
+              height: "70px",
+              width: "70px",
+              background: "transparent",
+              borderWidth: 0,
+            }}
+          >
+            <img src={image3} alt="카메라" />
+          </button>
+          <button
+            onClick={() => navigate("/profile")}
+            style={{
+              height: "70px",
+              width: "70px",
+              background: "transparent",
+              borderWidth: 0,
+            }}
+          >
+            <img src={image4} alt="프로필" />
+          </button>
         </div>
       </div>
     </div>
