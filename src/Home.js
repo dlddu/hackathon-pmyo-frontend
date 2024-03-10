@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./css/home.css"; // CSS 파일 경로가 맞는지 확인하세요.
+import "./css/home.css";
 import image1 from "./img/past_icon.png";
 import image2 from "./img/chart_icon.png";
 import image3 from "./img/camera_icon.png";
@@ -11,9 +11,6 @@ export const Home = () => {
 
   return (
     <div className="hello-screen">
-      <div className="header">
-        <h1>일분만</h1>
-      </div>
       <div className="welcome-message">
         <h2>안녕하세요</h2>
         <h3>홍길동님</h3>

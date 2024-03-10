@@ -6,7 +6,6 @@ import { BaseUrl } from "./url";
 
 const Camera = () => {
   const [imagePreview, setImagePreview] = useState(null);
-  const [analysisText, setAnalysisText] = useState("");
   const navigate = useNavigate();
 
   const handleImageChange = async (e) => {
@@ -39,7 +38,6 @@ const Camera = () => {
     if (navigate && navigate.state) {
       const { image, text } = navigate.state;
       setImagePreview(image);
-      setAnalysisText(text);
     }
   }, [navigate]);
 

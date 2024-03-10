@@ -1,5 +1,3 @@
-@import url("https://www.fontsquirrel.com/fonts/public-sans");
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -40,7 +38,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Public Sans";
   min-height: 100vh;
   margin: 0px;
 }

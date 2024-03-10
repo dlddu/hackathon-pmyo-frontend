@@ -6,8 +6,9 @@
   padding: 20px;
   border: 2px dashed #aaa;
   margin: 10px;
-  height: 700px;
-  background-color: #f0f0f0;
+  height: 600px;
+  border-radius: 20%;
+  background-color: #4c6ef5;
 }
 
 .image-upload-container input {
