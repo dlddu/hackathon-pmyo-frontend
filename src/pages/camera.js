@@ -1,26 +1,37 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/camera.css";
+import axios from "axios";
+import { BaseUrl } from "./url";
 
 const Camera = () => {
   const [imagePreview, setImagePreview] = useState(null);
   const [analysisText, setAnalysisText] = useState("");
   const navigate = useNavigate();
 
-  const handleImageChange = (e) => {
+  const handleImageChange = async (e) => {
     const file = e.target.files[0];
     const previewUrl = URL.createObjectURL(file);
     setImagePreview(previewUrl);
-
-    // 이미지 분석 로직을 추가하세요.
-    // 예: ChatGPT에 의한 이미지 분석을 진행하고 결과를 setAnalysisText에 저장합니다.
-
-    // 5초 후에 '/chatgpt' 페이지로 이동하며 이미지와 분석 텍스트를 전달합니다.
-    setTimeout(() => {
-      navigate("/chatgpt", {
-        state: { image: previewUrl, text: analysisText },
-      });
-    }, 5000);
+    const formData = new FormData();
+    formData.append("file", file);
+    const apiResult = await axios.post(`${BaseUrl}/gpts`, formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+      transformRequest: [
+        function () {
+          return formData;
+        },
+      ],
+    });
+    navigate("/chatgpt", {
+      state: {
+        image: previewUrl,
+        text: JSON.parse(apiResult.data.conversation).choices[0].message
+          .content,
+      },
+    });
   };
 
   // navigate로 페이지 이동시 state에서 이미지와 분석 텍스트를 받아옵니다.
