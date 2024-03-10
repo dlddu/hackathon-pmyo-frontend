@@ -1,10 +1,11 @@
 import React from "react";
 
-import "../css/chart.css";
-import chart from "./chart.png";
-
 const Chart = () => {
-  return <img src={chart} />;
+  return (
+    <div>
+      <img src={"/chart.png"} alt="Chart" />
+    </div>
+  );
 };
 
 export default Chart;
