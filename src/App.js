@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./Home";
-import Past from "./pages/past";
+import { Past } from "./pages/past";
 import Camera from "./pages/camera";
 import Login from "./pages/login";
 import Profile from "./pages/profile";
