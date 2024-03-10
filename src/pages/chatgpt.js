@@ -1,21 +1,16 @@
-import React, { useState } from "react";
-import "../css/camera.css";
+import React from "react";
+import "../css/chatgpt.css";
 
-const Chatgpt = () => {
-  const [imagePreview, setImagePreview] = useState(null);
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    const previewUrl = URL.createObjectURL(file);
-    setImagePreview(previewUrl);
-  };
-
+// 분석 이미지 및 글 넘겨서 보여주기
+const Chatgpt = ({ image, analysisText }) => {
   return (
-    <div className="image-upload-container">
-      <input type="file" onChange={handleImageChange} />
-      {imagePreview && (
-        <img src={imagePreview} alt="Preview" className="image-preview" />
-      )}
+    <div className="screen">
+      <main className="gpt-screen-container">
+        {image && <img src={image} alt="Uploaded" className="uploaded-image" />}
+        {analysisText && (
+          <div className="analysis-text">{analysisText}</div>
+        )}{" "}
+      </main>
     </div>
   );
 };
