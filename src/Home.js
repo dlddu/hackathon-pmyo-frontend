@@ -13,7 +13,7 @@ export const Home = () => {
     <div className="hello-screen">
       <div className="welcome-message">
         <h2>안녕하세요</h2>
-        <h3>홍길동님</h3>
+        <h3>장아현 님</h3>
         <h2>이번 달 </h2>
         <h5> 3,612원 </h5>
         <h4> 환급 예정입니다!</h4>

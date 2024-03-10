@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 import "../css/camera.css";
 import axios from "axios";
 import { BaseUrl } from "./url";
+import image1 from "../img/past_icon.png";
+import image2 from "../img/chart_icon.png";
+import image3 from "../img/camera_icon.png";
+import image4 from "../img/profile_icon.png";
 
 const Camera = () => {
   const [imagePreview, setImagePreview] = useState(null);
@@ -42,16 +46,33 @@ const Camera = () => {
   }, [navigate]);
 
   return (
-    <div className="image-upload-container">
-      <input type="file" onChange={handleImageChange} />
-      {imagePreview && (
-        <img
-          src={imagePreview}
-          alt="Preview"
-          className="image-preview"
-          style={{ maxWidth: "50%" }}
-        />
-      )}
+    <div>
+      <div className="image-upload-container">
+        <h2> 이미지를 선택하세요.</h2>
+        <input type="file" onChange={handleImageChange} />
+        {imagePreview && (
+          <img
+            src={imagePreview}
+            alt="Preview"
+            className="image-preview"
+            style={{ maxWidth: "50%" }}
+          />
+        )}
+      </div>
+      <div className="navigation">
+        <button onClick={() => navigate("/past")}>
+          <img src={image1} alt="과거" />
+        </button>
+        <button onClick={() => navigate("/chart")}>
+          <img src={image2} alt="차트" />
+        </button>
+        <button onClick={() => navigate("/camera")}>
+          <img src={image3} alt="카메라" />
+        </button>
+        <button onClick={() => navigate("/profile")}>
+          <img src={image4} alt="프로필" />
+        </button>
+      </div>
     </div>
   );
 };

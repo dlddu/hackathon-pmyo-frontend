@@ -26,9 +26,6 @@ export const Past = () => {
         justifyItems: "center",
       }}
     >
-      <font color={"#9896FF"} style={{ fontSize: "34px", marginTop: 30 }}>
-        일분만
-      </font>
       <div>
         <div
           style={{
