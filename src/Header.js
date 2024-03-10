@@ -1,10 +1,11 @@
 import React from "react";
 import "./Header.css";
+import logo from "./img/logo_icon.png";
 
 const Header = () => {
   return (
     <div className="header">
-      <h1>일분만</h1>
+      <img src={logo} alt="과거" style={{ maxWidth: "25%" }} />
     </div>
   );
 };
