@@ -1,32 +1,60 @@
+@import url("https://www.fontsquirrel.com/fonts/public-sans");
+
 .hello-screen {
   font-family: "Arial", sans-serif;
   color: #333;
 }
 .header {
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 20px;
+  display: flex;
   background: #fff;
+  font-family: "Public Sans", sans-serif;
+  font-weight: bold;
   /* Add any additional styling for the header */
 }
+.welcome-message {
+  margin-left: 15%;
+}
 .welcome-message h2 {
-  text-align: center;
+  text-align: left;
   color: #000;
+  font-size: 30px;
   /* Add any additional styling for the welcome message */
 }
 .welcome-message h3 {
-  text-align: center;
+  text-align: left;
   color: #4c6ef5;
+  font-size: 50px;
+  margin-top: -3px;
   /* Add any additional styling for the welcome message */
 }
 .welcome-message h4 {
-  text-align: center;
+  text-align: left;
   color: #000;
+  margin-top: -30px;
+  font-size: 30px;
   /* Add any additional styling for the welcome message */
 }
+
+.welcome-message h5 {
+  text-align: left;
+  color: #000;
+  font-size: 60px;
+  margin-top: -3px;
+  /* Add any additional styling for the welcome message */
+}
+.welcome-message h4,
+.welcome-message h5 {
+  display: inline; /* 헤딩 요소를 인라인 요소로 설정 */
+}
+
 .navigation {
   display: flex;
   justify-content: space-around;
   padding: 20px 0;
+  margin-top: 200px;
   /* Add any additional styling for navigation */
 }
 /* Add responsive or additional styles as needed */

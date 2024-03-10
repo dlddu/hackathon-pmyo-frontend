@@ -17,7 +17,9 @@ export const Home = () => {
       <div className="welcome-message">
         <h2>안녕하세요</h2>
         <h3>홍길동님</h3>
-        <h4>이번 달 3,612원 환급 예정입니다!</h4>
+        <h2>이번 달 </h2>
+        <h5> 3,612원 </h5>
+        <h4> 환급 예정입니다!</h4>
       </div>
       {/* 네비게이션 바와 버튼들을 추가합니다. */}
       <div className="navigation">

@@ -33,18 +33,16 @@ const Camera = () => {
   }, [navigate]);
 
   return (
-    <div className="screen">
-      <main className="image-upload-container">
-        <input type="file" onChange={handleImageChange} />
-        {imagePreview && (
-          <img
-            src={imagePreview}
-            alt="Preview"
-            className="image-preview"
-            style={{ maxWidth: "30%" }}
-          />
-        )}
-      </main>
+    <div className="image-upload-container">
+      <input type="file" onChange={handleImageChange} />
+      {imagePreview && (
+        <img
+          src={imagePreview}
+          alt="Preview"
+          className="image-preview"
+          style={{ maxWidth: "50%" }}
+        />
+      )}
     </div>
   );
 };
